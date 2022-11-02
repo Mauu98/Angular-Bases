@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  title: string = 'Counter App';
+
+  counterNumber: number = 40;
+
+  base: number = 15;
+
+  plusNumber(value: number){
+    this.counterNumber += value;
+  }
+
+  minusNumber(value : number){
+    this.counterNumber -= value;
+  }
 }
