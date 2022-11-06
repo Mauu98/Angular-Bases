@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CounterComponent } from './counters/counter.component';
 import { CounterModule } from './counters/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({ //Decorador
   declarations: [
@@ -13,7 +14,8 @@ import { HeroesModule } from './heroes/heroes.module';
   imports: [ //Se colocan otros módulos
     BrowserModule,
     HeroesModule,
-    CounterModule
+    CounterModule,
+    DbzModule
   ],
   providers: [], //Servicios
   bootstrap: [AppComponent] //Componente principal
