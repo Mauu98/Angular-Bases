@@ -1,28 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
-interface Caracter {
-  name: string,
-  power: number
-}
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html'
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent  {
 
-  new: Caracter = {
-    name: 'Freezer',
-    power: 10000
+  new : Character = {
+    name : 'Mister Satan',
+    power: 900
   }
 
-  constructor() { }
+  
 
-  ngOnInit(): void {
+  /*get characters(): Character[] {
+    return this.dbzService.characters;
+  }*/
+
+  addNewCharacter(arg : Character){
+    //this.characters.push(arg);
   }
 
-  addCaracter(){
-    console.log(this.new);
-  }
+  //Inyección de dependencias
+  constructor(private dbzService : DbzService){}
 
 }
